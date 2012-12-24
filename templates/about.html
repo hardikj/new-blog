@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{%block pagestyle%}
+<style type="text/css">
+    img {position:50% 60px;}
+	#what-block { position:absolute;
+	              left:312px;
+				  top:200px;
+				  }
+	#post-header {font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+	             position:relative;
+	             left:300px;
+
+	             }
+	p { font-family: Rockwell, "Courier Bold", Courier, Georgia, Times, "Times New Roman", serif;
+	    line-height:140%;
+	   position:relative;
+	   left:300px;
+	   font-size : 130%;
+	   
+       }
+</style>
+{%endblock%}
+
+{%block title%}
+<title>
+About Me|Hardik Juneja's Blog
+</title>
+{%endblock%}
+
+{% block what %} <h2 id="what-block">ABOUT ME</h2>{% endblock %}
+
+{% block content %}
+{{p}}
+ 
+ 
+ <p>I'm Hardik and I'm a undergraduate student in delhi,India. I love programing,<br>
+   I also love Music specially softrock. I am also a bassist and love to play base. <br>
+   besides that I like travelling and Exploring places. I like to explore Food too </p>
+ 
+ <h2 id="post-header"> About this site </h2>
+ 
+ <p> This is simply built in Django framework.</p>
+ <a href="/blog/home/"><img src="1.JPG" ></a> 
+{% endblock %}

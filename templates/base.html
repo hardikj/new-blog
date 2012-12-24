@@ -1,0 +1,91 @@
+<html>
+
+<head>
+    <style type="text/css">
+
+	    body {
+		      background-image:url('bg.png');
+			  }
+	    h1 {color : red;
+    		font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+			position:absolute;
+			left:350px;
+			font-size:300%;
+			text-align:center;
+			}
+		h2 {color : blue;}
+        
+		a:link {color:green;
+		       text-decoration:none;}
+		a:visited {
+		           color:green;}
+        a:hover {
+		         
+				 text-decoration:underline;
+				 font-weight:bold;}
+		a:active{ 
+		         color:red;
+		         text-decoration:underline; }		 
+        				 
+		#nav { font-size:20px;
+		       position:absolute;
+		       left:430px;
+			   top:120px;
+			   text-align:center;
+			   font-size:180%;
+			   font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+			   }		 
+        #h2 { position : absolute;
+		      left:320px;
+			  top: 180px;
+			  font-size:200%;
+			  font-family: "Lucida Bright", Georgia, serif;
+			  }
+		#position { position : absolute;
+                    top:250px;
+					}
+		#hr1      {
+                    position:absolute;
+                    top:150px;
+					left:100px;
+                   }
+        #hr2      {
+                     position : absolute;
+                     top:101px;
+					 left:170px;
+                   }					 
+	</style>
+{%block pagestyle%}{%endblock%}
+
+    {%block title%}
+	{%endblock%}
+
+</head>
+<body>
+<div id="page">
+<div id="fb-root"></div>
+
+<h1> HARDIK JUNEJA'S BLOG</h1>
+<hr id="hr1" align="center" width="80%" noshade>
+
+<div id="nav">  <a href = "/blog/home/" title="Home Page">HOME</a> &nbsp; &nbsp; &nbsp;
+	    <a href = "/blog/archives/" title="Blog Archives">ARCHIVES</a>&nbsp; &nbsp; &nbsp;
+		<a href = "/blog/about/" title="About Me">ABOUT</a>
+		
+</div>	
+
+
+<hr id="hr2" align="center" width="68%" size=5px color=#C0C0C0 >
+	
+<h2 id="h2"> {%block what%}{%endblock%} </h2>
+
+<br>
+
+<div id="position">
+{% block content%}
+{% endblock %} 
+{%block comment%}{%endblock%}
+</div>
+</div>	
+</body>
+</html>

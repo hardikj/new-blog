@@ -1,0 +1,26 @@
+<html>
+<head>
+    <title>Contact form</title>
+</head>
+<body>
+    <h1> Contact us </h1>
+    
+    {%if errors%}
+        <ul>
+            <li>
+                {%for error in errors%}
+                <li> {{error}}</li>
+                {%endfor%}
+            </li>
+        </ul>
+    {%endif%}
+ 
+    <form action="" method="post">
+	    {% csrf_token %}
+        <p> subject : <input type="text" name="s"/> </p>
+        <p> email : <input type="text" name="email"/> </p>
+        <p> Message: <textarea name="message" row="10" cols="50"></textarea></p>
+		<p> submit : <input type="submit" value="send"/>
+    </form>
+</body>
+</html>	

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{%block pagestyle%}
+<style type="text/css">
+    ul { font-family: "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
+		 font-size:168%;
+		 list-style-type: none ;
+		 position:relative;
+		 left:270px;
+		 line-height:205%}
+	#h1 { color:blue;
+	        }
+
+</style>
+{%endblock%}
+
+{%block title%}
+<title>
+Home|Hardik Juneja's Blog
+</title>
+{%endblock%}
+
+{%block what%}
+<div id="h1">ARCHIVES</div>
+{%endblock%}
+
+{%block content%}
+{%if post_list%}
+    <ul>
+	
+    {% for post in post_list reversed%}
+	    <li><a href="/blog/home/{{post.id}}" title="{{post.date}}">{{post.title}}</a>
+		&nbsp; &nbsp; <span> Posted on {{post.date}} </span>
+		</li>
+	{%endfor%}
+	</ul>
+{%else%}
+	<p>no post available </p>
+{%endif%}	
+{%endblock%}
+
+
+
+
+
+<li id="list"><p><a href="/blog/home/{{post.id}}" title="{{post.date}}"></p>{{post.title}}</a>
+        &nbsp; &nbsp; <span> Posted on {{post.date}} </span> 
+        </li>
