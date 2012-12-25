@@ -7,6 +7,7 @@ def home(request):
 
 def show(request,post_id):
     try:
+        post_id= int(post_id)
         p = post.objects.get(pk=post_id)
     except  post.DoesNotExist:
         raise Http404
@@ -17,5 +18,5 @@ def archive(request):
     return render_to_response('archive.html',{'post_list':post_list})
 
 def about(request):
-    p="hello"
+    p=""
     return render_to_response('about.html',{'p':p})

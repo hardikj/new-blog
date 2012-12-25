@@ -29,7 +29,7 @@ Home|Hardik Juneja's Blog
     <ul>
 	
     {% for post in post_list reversed%}
-	    <li><a href="/blog/home/{{post.id}}" title="{{post.date}}">{{post.title}}</a>
+	    <li><a href="/home/{{post.id}}" title="{{post.date}}">{{post.title}}</a>
 		&nbsp; &nbsp; <span> Posted on {{post.date}} </span>
 		</li>
 	{%endfor%}

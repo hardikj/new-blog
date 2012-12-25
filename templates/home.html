@@ -33,7 +33,7 @@ Home|Hardik Juneja's Blog
 {%if post_list %}
     <ul>
     {% for post in post_list reversed %}
-        <li id="list"><p><a href="/blog/home/{{post.id}}" title="{{post.date}}"></p>{{post.title}}</a>
+        <li id="list"><p><a href="/home/{{post.id}}" title="{{post.date}}"></p>{{post.title}}</a>
         &nbsp; &nbsp; <span> Posted on {{post.date}} </span> 
         </li>
     
